@@ -4,8 +4,9 @@ def is_valid_policyone(letter, min_, max_, password):
     count = password.count(letter)
     return (count >= min_) and (count <= max_)
 
+
 def at(s, x):
-    return s[x - 1: x]
+    return s[x - 1]
 
 
 def is_valid_policytwo(letter, posa, posb, password):
