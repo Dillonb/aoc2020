@@ -23,6 +23,4 @@ print("Highest seat id: %d" % max(seat_ids))
 
 seat_ids = sorted(seat_ids)
 
-for i in range(0, len(seat_ids) - 1):
-    if seat_ids[i + 1] - seat_ids[i] != 1:
-        print("Your seat id: %d" % (seat_ids[i] + 1))
+print("Your seat id: %d" % (next(filter(lambda s: s[1] - s[0] != 1, map(lambda i: (seat_ids[i], seat_ids[i + 1]), range(0, len(seat_ids) - 1))))[0] + 1))
